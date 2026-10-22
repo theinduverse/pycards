@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --fg: #1c1b19;
+  --fg-muted: #57544d;
+  --border: #e4e1d8;
+  --code-bg: #efece4;
+  --accent: #3b6fd8;
+  --accent-soft: #e6eefc;
+  --accent-fg: #ffffff;
+  --success: #1f8a4c;
+  --success-soft: #e3f4ea;
+  --danger: #c2412d;
+  --danger-soft: #fbe9e5;
+  --warn: #f2b632;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141517;
+    --surface: #1d1f22;
+    --fg: #ecebe7;
+    --fg-muted: #a8a59d;
+    --border: #2f3236;
+    --code-bg: #26292d;
+    --accent: #6b9bff;
+    --accent-soft: #1f2b44;
+    --accent-fg: #0d1220;
+    --success: #4cc27e;
+    --success-soft: #16301f;
+    --danger: #ff7a66;
+    --danger-soft: #3a1e19;
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.card-in {
+  animation: card-in 0.25s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-in {
+    animation: none;
+  }
+}
+
+.cm-editor {
+  font-size: 0.95rem;
+}
+.cm-editor.cm-focused {
+  outline: none;
+}
