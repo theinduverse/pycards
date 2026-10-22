@@ -25,6 +25,6 @@ Challenge `tests` are Python run after the learner's code in the same namespace.
 
 `npm run build` writes a static site to `out/`.
 
-**Vercel (recommended):** push this repo to GitHub, import it at vercel.com/new, and set **Root Directory** to `python-cards`. Every push to `main` then redeploys automatically.
+**Vercel (recommended):** import this repo at vercel.com/new and click Deploy (Next.js is detected automatically). Every push to `main` then redeploys automatically.
 
-**Cloudflare Pages:** set build command `npm run build`, output directory `out`, and root directory `python-cards`.
+**Cloudflare Pages:** set build command `npm run build` and output directory `out`.
